@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
 import { supabase } from '../lib/supabaseClient'
+import SpriteEditor from './SpriteEditor'
 
 export default function FileList() {
   const [files, setFiles] = useState([])
   const [loading, setLoading] = useState(true)
   const [newTags, setNewTags] = useState({})
+  const [showSpriteEditor, setShowSpriteEditor] = useState(false)
 
   useEffect(() => {
     loadFiles()
@@ -155,6 +157,24 @@ export default function FileList() {
     }
   }
 
+  const handleDownload = async (file) => {
+    try {
+      const response = await fetch(file.publicUrl);
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = file.name;
+      document.body.appendChild(a);
+      a.click();
+      window.URL.revokeObjectURL(url);
+      document.body.removeChild(a);
+    } catch (error) {
+      console.error('Error downloading file:', error);
+      alert('ダウンロードに失敗したナリ！');
+    }
+  };
+
   if (loading) {
     return <div className="text-center p-4">読み込み中...</div>
   }
@@ -162,7 +182,15 @@ export default function FileList() {
   return (
     <div className="p-4">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl font-bold mb-4">アップロード済みファイル</h2>
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-2xl font-bold">アップロード済みファイル</h2>
+          <button
+            onClick={() => setShowSpriteEditor(true)}
+            className="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600"
+          >
+            スプライトエディタを開く
+          </button>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {files.map((file) => (
             <div key={file.name} className="border rounded-lg p-4 bg-white shadow">
@@ -170,7 +198,7 @@ export default function FileList() {
                 <img
                   src={file.publicUrl}
                   alt={file.name}
-                  className="w-full h-48 object-cover rounded mb-2"
+                  className="w-full h-48 object-contain rounded mb-2 bg-white p-2"
                 />
               ) : file.isAudio ? (
                 <audio
@@ -178,7 +206,7 @@ export default function FileList() {
                   className="w-full mb-2"
                 >
                   <source src={file.publicUrl} type={file.metadata?.mimetype} />
-                  お使いのブラウザは音声再生に対応していないナリ
+                  お使いのブラウザは音声再生に対応し��いないナリ
                 </audio>
               ) : (
                 <div className="w-full h-48 bg-gray-100 flex items-center justify-center rounded mb-2">
@@ -192,12 +220,28 @@ export default function FileList() {
                     {file.file_type} / {file.file_extension}
                   </span>
                 </div>
-                <button
-                  onClick={() => handleCopyUrl(file.publicUrl)}
-                  className="text-blue-500 hover:text-blue-700 text-sm ml-2"
-                >
-                  URLコピー
-                </button>
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => handleDownload(file)}
+                    className="text-blue-500 hover:text-blue-700 text-sm px-2 py-1 border border-blue-500 rounded flex items-center gap-1"
+                    title="ダウンロード"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    <span>DL</span>
+                  </button>
+                  <button
+                    onClick={() => handleCopyUrl(file.publicUrl)}
+                    className="text-green-500 hover:text-green-700 text-sm px-2 py-1 border border-green-500 rounded flex items-center gap-1"
+                    title="URLをコピー"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                    <span>URL</span>
+                  </button>
+                </div>
               </div>
               
               <div className="mb-2">
@@ -251,6 +295,15 @@ export default function FileList() {
             </div>
           ))}
         </div>
+
+        {showSpriteEditor && (
+          <SpriteEditor
+            onSave={() => {
+              loadFiles();  // ファイル一覧を更新
+            }}
+            onClose={() => setShowSpriteEditor(false)}
+          />
+        )}
       </div>
     </div>
   )

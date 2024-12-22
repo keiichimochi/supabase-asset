@@ -1,0 +1,790 @@
+size:
+  tokens: 4814
+tree:
+  .gitignore: null
+  README.md: null
+  package-lock.json: null
+  package.json: null
+  public:
+    favicon.ico: null
+    index.html: null
+    logo192.png: null
+    logo512.png: null
+    manifest.json: null
+    robots.txt: null
+  src:
+    App.css: null
+    App.test.tsx: null
+    App.tsx: null
+    index.css: null
+    index.tsx: null
+    logo.svg: null
+    reportWebVitals.ts: null
+    setupTests.ts: null
+files:
+  /.gitignore:
+    type: content
+    content: >
+      # See https://help.github.com/articles/ignoring-files/ for more about
+      ignoring files.
+
+
+      # dependencies
+
+      /node_modules
+
+      /.pnp
+
+      .pnp.js
+
+
+      # testing
+
+      /coverage
+
+
+      # production
+
+      /build
+
+
+      # misc
+
+      .DS_Store
+
+      .env.local
+
+      .env.development.local
+
+      .env.test.local
+
+      .env.production.local
+
+
+      npm-debug.log*
+
+      yarn-debug.log*
+
+      yarn-error.log*
+    hash: d373417ea2a8844e3b7a1515aab123e90fbeb4b7225144d55d243d9f6f04f73a
+    size: 310
+  /README.md:
+    type: content
+    content: >
+      # Getting Started with Create React App
+
+
+      This project was bootstrapped with [Create React
+      App](https://github.com/facebook/create-react-app).
+
+
+      ## Available Scripts
+
+
+      In the project directory, you can run:
+
+
+      ### `npm start`
+
+
+      Runs the app in the development mode.\
+
+      Open [http://localhost:3000](http://localhost:3000) to view it in the
+      browser.
+
+
+      The page will reload if you make edits.\
+
+      You will also see any lint errors in the console.
+
+
+      ### `npm test`
+
+
+      Launches the test runner in the interactive watch mode.\
+
+      See the section about [running
+      tests](https://facebook.github.io/create-react-app/docs/running-tests) for
+      more information.
+
+
+      ### `npm run build`
+
+
+      Builds the app for production to the `build` folder.\
+
+      It correctly bundles React in production mode and optimizes the build for
+      the best performance.
+
+
+      The build is minified and the filenames include the hashes.\
+
+      Your app is ready to be deployed!
+
+
+      See the section about
+      [deployment](https://facebook.github.io/create-react-app/docs/deployment)
+      for more information.
+
+
+      ### `npm run eject`
+
+
+      **Note: this is a one-way operation. Once you `eject`, you can’t go
+      back!**
+
+
+      If you aren’t satisfied with the build tool and configuration choices, you
+      can `eject` at any time. This command will remove the single build
+      dependency from your project.
+
+
+      Instead, it will copy all the configuration files and the transitive
+      dependencies (webpack, Babel, ESLint, etc) right into your project so you
+      have full control over them. All of the commands except `eject` will still
+      work, but they will point to the copied scripts so you can tweak them. At
+      this point you’re on your own.
+
+
+      You don’t have to ever use `eject`. The curated feature set is suitable
+      for small and middle deployments, and you shouldn’t feel obligated to use
+      this feature. However we understand that this tool wouldn’t be useful if
+      you couldn’t customize it when you are ready for it.
+
+
+      ## Learn More
+
+
+      You can learn more in the [Create React App
+      documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+
+      To learn React, check out the [React documentation](https://reactjs.org/).
+    hash: 749ba82e0f7f6528d3611c5b74870b6fe2ee98243bf84ecc3a3d8b507291a3c0
+    size: 2117
+  /package.json:
+    type: content
+    content: |
+      {
+        "name": "sprite-editor",
+        "version": "0.1.0",
+        "private": true,
+        "dependencies": {
+          "cra-template-typescript": "1.2.0",
+          "react": "^19.0.0",
+          "react-dom": "^19.0.0",
+          "react-scripts": "5.0.1"
+        },
+        "scripts": {
+          "start": "react-scripts start",
+          "build": "react-scripts build",
+          "test": "react-scripts test",
+          "eject": "react-scripts eject"
+        },
+        "eslintConfig": {
+          "extends": [
+            "react-app",
+            "react-app/jest"
+          ]
+        },
+        "browserslist": {
+          "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+          ],
+          "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+          ]
+        }
+      }
+    hash: 1fe366808327ec3eecd4fb7843fd0cd8431ad68c473a8b4a372a80304298891d
+    size: 697
+    json:
+      name: sprite-editor
+      version: 0.1.0
+      private: true
+      dependencies:
+        cra-template-typescript: 1.2.0
+        react: ^19.0.0
+        react-dom: ^19.0.0
+        react-scripts: 5.0.1
+      scripts:
+        start: react-scripts start
+        build: react-scripts build
+        test: react-scripts test
+        eject: react-scripts eject
+      eslintConfig:
+        extends:
+          - react-app
+          - react-app/jest
+      browserslist:
+        production:
+          - ">0.2%"
+          - not dead
+          - not op_mini all
+        development:
+          - last 1 chrome version
+          - last 1 firefox version
+          - last 1 safari version
+  /public/favicon.ico:
+    type: binary
+    hash: 3d10f7da6c603178340081668c4ac5b3ae9743ca9a262ab0fcd312fbb9f48bdd
+    size: 3870
+    url: https://raw.githubusercontent.com/keiichimochi/sprite-editor/1755024ae9f844d8ad37dd9d243d821a1d91f1d3/public/favicon.ico
+  /public/index.html:
+    type: content
+    content: >
+      <!DOCTYPE html>
+
+      <html lang="en">
+        <head>
+          <meta charset="utf-8" />
+          <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="theme-color" content="#000000" />
+          <meta
+            name="description"
+            content="Web site created using create-react-app"
+          />
+          <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+          <!--
+            manifest.json provides metadata used when your web app is installed on a
+            user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+          -->
+          <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+          <!--
+            Notice the use of %PUBLIC_URL% in the tags above.
+            It will be replaced with the URL of the `public` folder during the build.
+            Only files inside the `public` folder can be referenced from the HTML.
+
+            Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+            work correctly both with client-side routing and a non-root public URL.
+            Learn how to configure a non-root public URL by running `npm run build`.
+          -->
+          <title>React App</title>
+        </head>
+        <body>
+          <noscript>You need to enable JavaScript to run this app.</noscript>
+          <div id="root"></div>
+          <!--
+            This HTML file is a template.
+            If you open it directly in the browser, you will see an empty page.
+
+            You can add webfonts, meta tags, or analytics to this file.
+            The build step will place the bundled scripts into the <body> tag.
+
+            To begin the development, run `npm start` or `yarn start`.
+            To create a production bundle, use `npm run build` or `yarn build`.
+          -->
+        </body>
+      </html>
+    hash: 20afc17b6358bfdf5d74513225cd4a73443fa0bd15b944af71e143f694a5cf7c
+    size: 1721
+  /public/logo192.png:
+    type: binary
+    hash: c386396ec70db3608075b5fbfaac4ab1ccaa86ba05a68ab393ec551eb66c3e00
+    size: 5347
+    url: https://raw.githubusercontent.com/keiichimochi/sprite-editor/1755024ae9f844d8ad37dd9d243d821a1d91f1d3/public/logo192.png
+  /public/logo512.png:
+    type: binary
+    hash: 9ea4f4da7050c0cc408926f6a39c253624e9babb1d43c7977cd821445a60b461
+    size: 9664
+    url: https://raw.githubusercontent.com/keiichimochi/sprite-editor/1755024ae9f844d8ad37dd9d243d821a1d91f1d3/public/logo512.png
+  /public/manifest.json:
+    type: content
+    content: |
+      {
+        "short_name": "React App",
+        "name": "Create React App Sample",
+        "icons": [
+          {
+            "src": "favicon.ico",
+            "sizes": "64x64 32x32 24x24 16x16",
+            "type": "image/x-icon"
+          },
+          {
+            "src": "logo192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+          },
+          {
+            "src": "logo512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+          }
+        ],
+        "start_url": ".",
+        "display": "standalone",
+        "theme_color": "#000000",
+        "background_color": "#ffffff"
+      }
+    hash: 50b3d8c3903af3f78d871b94557ab14f4e39ca192eaca3d2cfa863c867279a14
+    size: 492
+    json:
+      short_name: React App
+      name: Create React App Sample
+      icons:
+        - src: favicon.ico
+          sizes: 64x64 32x32 24x24 16x16
+          type: image/x-icon
+        - src: logo192.png
+          type: image/png
+          sizes: 192x192
+        - src: logo512.png
+          type: image/png
+          sizes: 512x512
+      start_url: .
+      display: standalone
+      theme_color: "#000000"
+      background_color: "#ffffff"
+  /public/robots.txt:
+    type: content
+    content: |
+      # https://www.robotstxt.org/robotstxt.html
+      User-agent: *
+      Disallow:
+    hash: 90d24bc3bf698ac1e173739502298ccca72adf1f564fab05f484b8c48d1cadd2
+    size: 67
+  /src/App.css:
+    type: content
+    content: |
+      .App {
+        text-align: center;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        background-color: #282c34;
+        min-height: 100vh;
+        color: white;
+      }
+
+      .controls {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .grid-controls {
+        display: flex;
+        gap: 10px;
+      }
+
+      .custom-size-controls {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+        margin-top: 10px;
+      }
+
+      .size-input {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .size-input label {
+        min-width: 120px;
+        text-align: right;
+      }
+
+      .size-input input {
+        width: 80px;
+        padding: 4px 8px;
+        border: none;
+        border-radius: 4px;
+        background-color: rgba(255, 255, 255, 0.9);
+        color: #282c34;
+      }
+
+      .current-size {
+        font-size: 0.9em;
+        color: #61dafb;
+        margin-top: 5px;
+      }
+
+      button {
+        padding: 8px 16px;
+        background-color: #61dafb;
+        border: none;
+        border-radius: 4px;
+        color: #282c34;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #4fa8d5;
+      }
+
+      canvas {
+        background-color: #fff;
+        border-radius: 4px;
+        max-width: 100%;
+        height: auto;
+      }
+    hash: f3894482d3085e5ec887e382c0299e1efd884cc2be5e214f4b7a0116ae55ea73
+    size: 1232
+  /src/App.test.tsx:
+    type: content
+    content: |
+      import React from 'react';
+      import { render, screen } from '@testing-library/react';
+      import App from './App';
+
+      test('renders learn react link', () => {
+        render(<App />);
+        const linkElement = screen.getByText(/learn react/i);
+        expect(linkElement).toBeInTheDocument();
+      });
+    hash: 1f0914ca057e799130da87a78d48021657aba67e01fcbcb50b099944ee2ea864
+    size: 273
+  /src/App.tsx:
+    type: content
+    content: >
+      import React, { useState, useRef, useEffect } from 'react';
+
+      import './App.css';
+
+
+      interface GridSize {
+        width: number;
+        height: number;
+      }
+
+
+      const CURSOR_STEP = 8;
+
+      const MAX_SIZE = 64;
+
+
+      function App() {
+        const [image, setImage] = useState<HTMLImageElement | null>(null);
+        const [gridSize, setGridSize] = useState<GridSize>({ width: 8, height: 8 });
+        const canvasRef = useRef<HTMLCanvasElement>(null);
+        const [mousePos, setMousePos] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+
+        const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+          const file = event.target.files?.[0];
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+              const img = new Image();
+              img.onload = () => {
+                setImage(img);
+                drawImage(img);
+              };
+              img.src = e.target?.result as string;
+            };
+            reader.readAsDataURL(file);
+          }
+        };
+
+        const drawImage = (img: HTMLImageElement) => {
+          const canvas = canvasRef.current;
+          if (!canvas) return;
+
+          const ctx = canvas.getContext('2d');
+          if (!ctx) return;
+
+          canvas.width = img.width;
+          canvas.height = img.height;
+          ctx.drawImage(img, 0, 0);
+        };
+
+        const drawGrid = () => {
+          const canvas = canvasRef.current;
+          if (!canvas || !image) return;
+
+          const ctx = canvas.getContext('2d');
+          if (!ctx) return;
+
+          // Clear and redraw image
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          ctx.drawImage(image, 0, 0);
+
+          // Draw grid
+          ctx.strokeStyle = 'rgba(255, 0, 0, 0.3)';
+          ctx.lineWidth = 1;
+
+          // 8ドット単位のグリッドを描画するがナリ
+          for (let x = 0; x < canvas.width; x += CURSOR_STEP) {
+            ctx.beginPath();
+            ctx.moveTo(x, 0);
+            ctx.lineTo(x, canvas.height);
+            ctx.stroke();
+          }
+          for (let y = 0; y < canvas.height; y += CURSOR_STEP) {
+            ctx.beginPath();
+            ctx.moveTo(0, y);
+            ctx.lineTo(canvas.width, y);
+            ctx.stroke();
+          }
+
+          // マウスの位置に合わせて選択枠を描画するがナリ
+          const x = Math.min(Math.max(0, mousePos.x - gridSize.width / 2), canvas.width - gridSize.width);
+          const y = Math.min(Math.max(0, mousePos.y - gridSize.height / 2), canvas.height - gridSize.height);
+
+          // 8ドット単位でスナップするがナリ
+          const snappedX = Math.floor(x / CURSOR_STEP) * CURSOR_STEP;
+          const snappedY = Math.floor(y / CURSOR_STEP) * CURSOR_STEP;
+
+          // 選択枠を描画するがナリ
+          ctx.strokeStyle = 'rgba(0, 255, 0, 0.8)';
+          ctx.strokeRect(snappedX, snappedY, gridSize.width, gridSize.height);
+
+          // マウスカーソルを描画するがナリ
+          ctx.strokeStyle = 'rgba(255, 255, 255, 0.8)';
+          ctx.beginPath();
+          ctx.moveTo(mousePos.x - 10, mousePos.y);
+          ctx.lineTo(mousePos.x + 10, mousePos.y);
+          ctx.moveTo(mousePos.x, mousePos.y - 10);
+          ctx.lineTo(mousePos.x, mousePos.y + 10);
+          ctx.stroke();
+        };
+
+        const handleMouseMove = (event: React.MouseEvent<HTMLCanvasElement>) => {
+          const canvas = canvasRef.current;
+          if (!canvas) return;
+
+          const rect = canvas.getBoundingClientRect();
+          const scale = canvas.width / rect.width; // キャンバスのスケールを計算するがナリ
+          
+          // マウス座標をキャンバスの実際のサイズに合わせて調整するがナリ
+          const x = (event.clientX - rect.left) * scale;
+          const y = (event.clientY - rect.top) * scale;
+
+          setMousePos({ x, y });
+        };
+
+        const handleGridSizeChange = (width: number, height: number) => {
+          setGridSize({ 
+            width: Math.min(width, MAX_SIZE), 
+            height: Math.min(height, MAX_SIZE) 
+          });
+        };
+
+        const handleCustomSizeChange = (event: React.ChangeEvent<HTMLInputElement>, dimension: 'width' | 'height') => {
+          const value = Math.floor(Number(event.target.value) / CURSOR_STEP) * CURSOR_STEP;
+          const size = Math.min(Math.max(CURSOR_STEP, value), MAX_SIZE);
+          
+          setGridSize(prev => ({
+            ...prev,
+            [dimension]: size
+          }));
+        };
+
+        const handleCanvasClick = () => {
+          if (!image || !canvasRef.current) return;
+
+          const canvas = canvasRef.current;
+          
+          // マウスの位置に合わせて選択枠の位置を計算するがナリ
+          const x = Math.min(Math.max(0, mousePos.x - gridSize.width / 2), canvas.width - gridSize.width);
+          const y = Math.min(Math.max(0, mousePos.y - gridSize.height / 2), canvas.height - gridSize.height);
+
+          // 8ドット単位でスナップするがナリ
+          const snappedX = Math.floor(x / CURSOR_STEP) * CURSOR_STEP;
+          const snappedY = Math.floor(y / CURSOR_STEP) * CURSOR_STEP;
+
+          const tempCanvas = document.createElement('canvas');
+          tempCanvas.width = gridSize.width;
+          tempCanvas.height = gridSize.height;
+          const ctx = tempCanvas.getContext('2d');
+          if (!ctx) return;
+
+          ctx.drawImage(
+            image,
+            snappedX, snappedY, gridSize.width, gridSize.height,
+            0, 0, gridSize.width, gridSize.height
+          );
+
+          // Save the sprite
+          tempCanvas.toBlob((blob) => {
+            if (!blob) return;
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = `sprite_${snappedX}_${snappedY}.png`;
+            link.click();
+          });
+        };
+
+        useEffect(() => {
+          if (image) {
+            drawGrid();
+          }
+        }, [mousePos, gridSize, image]);
+
+        return (
+          <div className="App">
+            <div className="controls">
+              <input type="file" accept="image/*" onChange={handleImageUpload} />
+              <div className="grid-controls">
+                <button onClick={() => handleGridSizeChange(8, 8)}>8x8</button>
+                <button onClick={() => handleGridSizeChange(16, 16)}>16x16</button>
+                <button onClick={() => handleGridSizeChange(24, 24)}>24x24</button>
+                <button onClick={() => handleGridSizeChange(32, 32)}>32x32</button>
+              </div>
+              <div className="custom-size-controls">
+                <div className="size-input">
+                  <label>幅（8の倍数）:</label>
+                  <input
+                    type="number"
+                    min={CURSOR_STEP}
+                    max={MAX_SIZE}
+                    step={CURSOR_STEP}
+                    value={gridSize.width}
+                    onChange={(e) => handleCustomSizeChange(e, 'width')}
+                  />
+                </div>
+                <div className="size-input">
+                  <label>高さ（8の倍数）:</label>
+                  <input
+                    type="number"
+                    min={CURSOR_STEP}
+                    max={MAX_SIZE}
+                    step={CURSOR_STEP}
+                    value={gridSize.height}
+                    onChange={(e) => handleCustomSizeChange(e, 'height')}
+                  />
+                </div>
+                <div className="current-size">
+                  現在のサイズ: {gridSize.width}x{gridSize.height}
+                </div>
+              </div>
+            </div>
+            <canvas
+              ref={canvasRef}
+              onMouseMove={handleMouseMove}
+              onClick={handleCanvasClick}
+              style={{ border: '1px solid black' }}
+            />
+          </div>
+        );
+      }
+
+
+      export default App;
+    hash: ae39e7802690260a85fcfa299847540e534732c5341ca38c2c29494a5bc8ac00
+    size: 6942
+  /src/index.css:
+    type: content
+    content: >
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+
+      code {
+        font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+          monospace;
+      }
+    hash: daf22c296c801d3d533083361cc59fbdc22e5bfe528aa4bad1973b54cc5448a4
+    size: 366
+  /src/index.tsx:
+    type: content
+    content: |
+      import React from 'react';
+      import ReactDOM from 'react-dom/client';
+      import './index.css';
+      import App from './App.tsx';
+
+      const root = ReactDOM.createRoot(
+        document.getElementById('root') as HTMLElement
+      );
+      root.render(
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
+      );
+    hash: e548312a3c1ea966287d2f22171e92cafb21983b7624de041b1cb968c1b34f6c
+    size: 277
+  /src/logo.svg:
+    type: content
+    content: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.9 595.3"><g
+      fill="#61DAFB"><path d="M666.3 296.5c0-32.5-40.7-63.3-103.1-82.4 14.4-63.6
+      8-114.2-20.2-130.4-6.5-3.8-14.1-5.6-22.4-5.6v22.3c4.6 0 8.3.9 11.4 2.6
+      13.6 7.8 19.5 37.5 14.9 75.7-1.1 9.4-2.9 19.3-5.1
+      29.4-19.6-4.8-41-8.5-63.5-10.9-13.5-18.5-27.5-35.3-41.6-50 32.6-30.3
+      63.2-46.9 84-46.9V78c-27.5 0-63.5 19.6-99.9
+      53.6-36.4-33.8-72.4-53.2-99.9-53.2v22.3c20.7 0 51.4 16.5 84 46.6-14
+      14.7-28 31.4-41.3 49.9-22.6 2.4-44 6.1-63.6
+      11-2.3-10-4-19.7-5.2-29-4.7-38.2 1.1-67.9 14.6-75.8 3-1.8 6.9-2.6
+      11.5-2.6V78.5c-8.4 0-16 1.8-22.6 5.6-28.1 16.2-34.4 66.7-19.9 130.1-62.2
+      19.2-102.7 49.9-102.7 82.3 0 32.5 40.7 63.3 103.1 82.4-14.4 63.6-8 114.2
+      20.2 130.4 6.5 3.8 14.1 5.6 22.5 5.6 27.5 0 63.5-19.6 99.9-53.6 36.4 33.8
+      72.4 53.2 99.9 53.2 8.4 0 16-1.8 22.6-5.6 28.1-16.2 34.4-66.7 19.9-130.1
+      62-19.1 102.5-49.9 102.5-82.3zm-130.2-66.7c-3.7 12.9-8.3 26.2-13.5
+      39.5-4.1-8-8.4-16-13.1-24-4.6-8-9.5-15.8-14.4-23.4 14.2 2.1 27.9 4.7 41
+      7.9zm-45.8 106.5c-7.8 13.5-15.8 26.3-24.1 38.2-14.9 1.3-30 2-45.2 2-15.1
+      0-30.2-.7-45-1.9-8.3-11.9-16.4-24.6-24.2-38-7.6-13.1-14.5-26.4-20.8-39.8
+      6.2-13.4 13.2-26.8 20.7-39.9 7.8-13.5 15.8-26.3 24.1-38.2 14.9-1.3 30-2
+      45.2-2 15.1 0 30.2.7 45 1.9 8.3 11.9 16.4 24.6 24.2 38 7.6 13.1 14.5 26.4
+      20.8 39.8-6.3 13.4-13.2 26.8-20.7 39.9zm32.3-13c5.4 13.4 10 26.8 13.8
+      39.8-13.1 3.2-26.9 5.9-41.2 8 4.9-7.7 9.8-15.6 14.4-23.7 4.6-8 8.9-16.1
+      13-24.1zM421.2 430c-9.3-9.6-18.6-20.3-27.8-32 9 .4 18.2.7 27.5.7 9.4 0
+      18.7-.2 27.8-.7-9 11.7-18.3 22.4-27.5
+      32zm-74.4-58.9c-14.2-2.1-27.9-4.7-41-7.9 3.7-12.9 8.3-26.2 13.5-39.5 4.1 8
+      8.4 16 13.1 24 4.7 8 9.5 15.8 14.4 23.4zM420.7 163c9.3 9.6 18.6 20.3 27.8
+      32-9-.4-18.2-.7-27.5-.7-9.4 0-18.7.2-27.8.7 9-11.7 18.3-22.4 27.5-32zm-74
+      58.9c-4.9 7.7-9.8 15.6-14.4 23.7-4.6 8-8.9 16-13
+      24-5.4-13.4-10-26.8-13.8-39.8 13.1-3.1 26.9-5.8 41.2-7.9zm-90.5
+      125.2c-35.4-15.1-58.3-34.9-58.3-50.6 0-15.7 22.9-35.6 58.3-50.6 8.6-3.7
+      18-7 27.7-10.1 5.7 19.6 13.2 40 22.5 60.9-9.2 20.8-16.6 41.1-22.2
+      60.6-9.9-3.1-19.3-6.5-28-10.2zM310 490c-13.6-7.8-19.5-37.5-14.9-75.7
+      1.1-9.4 2.9-19.3 5.1-29.4 19.6 4.8 41 8.5 63.5 10.9 13.5 18.5 27.5 35.3
+      41.6 50-32.6 30.3-63.2 46.9-84 46.9-4.5-.1-8.3-1-11.3-2.7zm237.2-76.2c4.7
+      38.2-1.1 67.9-14.6 75.8-3 1.8-6.9 2.6-11.5 2.6-20.7 0-51.4-16.5-84-46.6
+      14-14.7 28-31.4 41.3-49.9 22.6-2.4 44-6.1 63.6-11 2.3 10.1 4.1 19.8 5.2
+      29.1zm38.5-66.7c-8.6 3.7-18 7-27.7 10.1-5.7-19.6-13.2-40-22.5-60.9
+      9.2-20.8 16.6-41.1 22.2-60.6 9.9 3.1 19.3 6.5 28.1 10.2 35.4 15.1 58.3
+      34.9 58.3 50.6-.1 15.7-23 35.6-58.4 50.6zM320.8 78.4z"/><circle cx="420.9"
+      cy="296.5" r="45.7"/><path d="M520.5 78.1z"/></g></svg>
+    hash: 6000b0e9b0b05b3f112de04f0d039768a1db63588ff9b6ef7099dbd71632f383
+    size: 2632
+  /src/reportWebVitals.ts:
+    type: content
+    content: >
+      import { ReportHandler } from 'web-vitals';
+
+
+      const reportWebVitals = (onPerfEntry?: ReportHandler) => {
+        if (onPerfEntry && onPerfEntry instanceof Function) {
+          import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+            getCLS(onPerfEntry);
+            getFID(onPerfEntry);
+            getFCP(onPerfEntry);
+            getLCP(onPerfEntry);
+            getTTFB(onPerfEntry);
+          });
+        }
+      };
+
+
+      export default reportWebVitals;
+    hash: fa208d5a5ab6d20b64122998b074707dea08d12ed619652955f77df958d85786
+    size: 425
+  /src/setupTests.ts:
+    type: content
+    content: |
+      // jest-dom adds custom jest matchers for asserting on DOM nodes.
+      // allows you to do things like:
+      // expect(element).toHaveTextContent(/react/i)
+      // learn more: https://github.com/testing-library/jest-dom
+      import '@testing-library/jest-dom';
+    hash: 22583759d0045fdf8d62c9db0aacba9fd8bddde79c671aa08c97dcfd4e930cc6
+    size: 241
